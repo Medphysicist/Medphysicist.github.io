@@ -238,7 +238,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <div class="links">
         <a href="mailto:ahmeds@fau.edu"><span>$</span> email</a>
         <a href="https://scholar.google.com/citations?user=YOWw80gAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span>$</span> google scholar</a>
-        <a href="https://www.researchgate.net/profile/Saad-Saeed-12" target="_blank" rel="noopener"><span>$</span> researchgate</a>
         <a href="https://github.com/Medphysicist" target="_blank" rel="noopener"><span>$</span> github</a>
         <a href="https://orcid.org/0000-0001-6261-9122" target="_blank" rel="noopener"><span>$</span> orcid</a>
         <a href="cv.html"><span>$</span> cv --as-paper</a>
@@ -563,7 +562,6 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
       <div class="links">
         <a href="mailto:ahmeds@fau.edu"><span>@</span> ahmeds@fau.edu</a>
         <a href="https://scholar.google.com/citations?user=YOWw80gAAAAJ&amp;hl=en" target="_blank" rel="noopener"><span>#</span> Google Scholar</a>
-        <a href="https://www.researchgate.net/profile/Saad-Saeed-12" target="_blank" rel="noopener"><span>#</span> ResearchGate</a>
         <!-- EDIT: replace with your real links, or delete -->
         <a href="https://github.com/Medphysicist" target="_blank" rel="noopener"><span>#</span> GitHub</a>
         <a href="https://orcid.org/0000-0001-6261-9122" target="_blank" rel="noopener"><span>#</span> ORCID</a>
@@ -605,8 +603,6 @@ const routes = {
 };
 const urls = {
   scholar:'https://scholar.google.com/citations?user=YOWw80gAAAAJ&hl=en',
-  researchgate:'https://www.researchgate.net/profile/Saad-Saeed-12',
-  rg:'https://www.researchgate.net/profile/Saad-Saeed-12',
   mail:'mailto:ahmeds@fau.edu'
 };
 
@@ -618,7 +614,7 @@ function run(raw){
   const cmd = raw.trim().toLowerCase().replace(/^(cd|cat|open|goto|ls)\s+/, '').replace(/[./]/g,'');
   if(!cmd) return;
   if(cmd === 'help' || cmd === 'man'){
-    say('available: about · research · projects · education · experience · publications · awards · contact · scholar · rg · clear');
+    say('available: about · research · projects · education · experience · publications · awards · contact · scholar · clear');
     return;
   }
   if(cmd === 'clear' || cmd === 'cls'){ out.innerHTML=''; return; }
